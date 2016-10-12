@@ -1,0 +1,74 @@
+\section{\label{sec:RingeKoerper}Ringe und Körper}
+
+  \textbf{Ring}:
+  \begin{items}
+    \item $(R,+,*)$ mit
+    \begin{enumeration}
+      \item $(R,+)$ abelsche Gruppe
+      \item $*$ assoziativ
+      \item neutrales Element $1_R$ von $*$
+      \item $*$ distributiv
+    \end{enumeration}
+    \item \underline{kommutativer Ring}: $*$ kommutativ
+    \item \underline{Teilring}: $T \subseteq R$ mit
+      \begin{enumeration}
+        \item $1_R \in T$
+        \item $\forall  t_1, t_2 \in T: t_1+t_2, t_1t_2 \in T$
+        \item $(T,+,*)$ Ring
+      \end{enumeration}
+    \item \underline{Ringhomomorphismus}: $\varphi: R \Rightarrow S$ mit
+    \begin{enumeration}
+      \item $\varphi(x +_R y) = \varphi(x) +_S \varphi(y)$
+      \item $\varphi(x *_R y) = \varphi(x) *_S \varphi(y)$
+      \item $\varphi(1_R) = 1_S$
+    \end{enumeration}
+    \item \underline{Einheit}: $= x \in R \ \exists y \in R: xy = yx = 1_R \ (y = x^{-1}) \\* \leadsto R^{\times}$ Menge aller $R$-Einheiten
+    \item kleiner \textsc{Fermat}: $p$ prim $\Rightarrow \forall a \in \Z: p$ teilt $a^p-a$
+    \item $\varphi: R \rightarrow S$ Ringhom. $\Rightarrow \Psi: R^{\times} \rightarrow S^{\times}$ Gruppenhom.
+  \end{items}
+
+  \textbf{Körper}:
+  \begin{items}
+    \item $=$ kommutativer Ring, $0_K \neq 1_K$, $K^{\times} = K \setminus \{ 0_K\}$
+    \item $K$ Körper, $R$ Ring mit $0_R \neq 1_R \Rightarrow$ jeder Ringhom. $K \rightarrow R$ ist injektiv
+  \end{items}
+
+  \textbf{komplexe Zahlen}:
+  \begin{items}
+    \item $= \C = \{ a+b\mi : a,b \in \R \}$
+    \item Eigenschaften:
+    \begin{enumeration}
+      \item $(a+b\mi)+(c+d\mi) = (a+c)+(b+d)\mi$
+      \item $(a+b\mi)(c+d\mi) = (ac-bd)+(ad+cb)\mi$ ($3$. binomische Formel)
+      \item $\overline{a+b\mi}=a-b\mi$ (komplex konjugiertes)
+    \end{enumeration}
+    \item \underline{Polarkoordinaten}:
+    \begin{enumerate}
+      \item $z=r(\cos(\alpha)+\mi \sin(\alpha)), r=\sqrt{a^2+b^2}=|z|$
+      \item $u=c+d\mi=s(\cos(\beta)+\mi \sin(\beta))\\* \leadsto z*u=rs(\cos(\alpha+\beta)+\mi \sin(\alpha+\beta))$ 
+    \end{enumerate}
+  \end{items}
+
+  \textbf{Polynomring}:
+  \begin{items}
+    \item $=\{ (a_i)_{i \in \N_0}, a_i \in R \text{ mit } N \in \N_0 \ \forall j \geq N: a_j=0 \}=R[X]$ (Veränderliche $X$, Abbruchsbedingung $N$)
+    \item Eigenschaften:
+    \begin{enumeration}
+      \item $(a_i)_{i \in \N_0}+(b_i)_{i \in \N_0} = (a_i+b_i)_{i \in \N_0}$
+      \item $(a_i)_{i \in \N_0}*(b_i)_{i \in \N_0} = (\sum_{i=0}^k a_ib_{k-i})_{k \in \N_0}$
+      \item Einselement $(1,0,\dots)$
+    \end{enumeration}
+    \item $\leadsto R[X]=\{ \sum_{i=0}^d r_iX^i : d \in \N_0, r_0,\dots,r_d \in R \}$
+    \item $R \subset R[X]$ mittels $R \ni r \mapsto rX^0 \in R[X]$
+    \item \underline{Grad}: $\text{Grad}(\sum_{i=0}^d r_iX^i)=\begin{cases} -\infty, \text{ falls } \sum_{i=0}^d r_iX^i=0 \\ \text{max}(\{ i \in \N_0: r_i \neq 0 \} ) \text{ sonst} \end{cases}$
+    \item Eigenschaften Grad:
+    \begin{enumeration}
+      \item $\text{Grad}(f+g) \leq \text{max}(\{ \text{Grad}(f), \text{Grad}(g) \})$
+      \item $\text{Grad}(f*g) \leq \text{Grad}(f)+\text{Grad}(g) \\* =$, falls $\forall a,b \in R \setminus \{ 0 \}: ab \neq 0$
+    \end{enumeration}
+    \item \underline{Leitkoeffizient}: $=r_{\text{Grad}(f)} \ (f = \sum_{i=0}^d r_iX^i \neq 0)$
+    \item \underline{Potenzen}: $A$ Ring, $a \in A$; $a^n = \underbrace{a*\cdots *a}_{n \text{ mal}}$
+    \item \underline{Zentrum}: $Z(A)=\{ a \in A : \forall x \in A : ax = xa \}$ \\* (kommutativer $A$-Teilring)
+    \item \underline{Einsetzabbildung}: $R$ Teilring von $Z(A), \\* E_a:R[X] \rightarrow A, f \mapsto E_a(f)=f(a) \\* \leadsto E_a(f+g)=E_a(f)+E_a(g), E_a(f*g)=E_a(f)E_a(g)$
+    \item \underline{Teiler}: $f,g \in R[X]$. $g$ Teiler von $f \Leftrightarrow  \exists h \in R[X]: f=gh$
+  \end{items}

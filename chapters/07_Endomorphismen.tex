@@ -1,0 +1,43 @@
+\section{\label{sec:Endomorphismen}Endomorphismen}
+
+$= \varphi: V \rightarrow V.\quad A:=D_{BB}(\varphi)$
+\ \\
+
+
+\textbf{Basiswechsel}:
+\begin{items}
+	\item $S=D_{B\tilde{B}}(Id_V), \ T:=S^{-1}=D_{\tilde{B}B}(Id_V) \\* \leadsto D_{\tilde{B}\tilde{B}}(\varphi)=\tilde{A}=T*A*S=S^{-1}*A*S$
+\end{items}
+
+\textbf{Invariante UVR}:
+\begin{items}
+	\item $V$ K-VR, $\varphi \in \text{End}(V)$. \\* $U \leq V$ ist $\varphi$-invarianter UVR $\Leftrightarrow \varphi(U) \subseteq U \\* \Rightarrow \varphi|_U \in \text{End}(U)$
+	\item \underline{zyklischer UVR}: $V$ K-VR, $\varphi \in \text{End}(V), U \leq V \ \varphi$-invariant \\* $U$ zyklisch $\Leftrightarrow \exists u \in U: \langle \{ u, \varphi(u),\dots,\varphi^{\text{dim}_K(U)-1}(u) \} \rangle = U \\* \leadsto U$ kleinster UVR, der $u$ enthält
+\end{items}
+
+\textbf{Eigenraum}:
+\begin{items}
+	\item \underline{Eigenvektor} (von $\varphi$): $= v \in V: \langle v \rangle = K * v$ 1-dim. $\varphi$-inv. UVR \\* $\leadsto v \neq 0 \wedge \exists \lambda \in K: \varphi(v)=\lambda v$
+	\item \underline{Eigenwert} (von $\varphi$): $= \lambda \in K$ von oben
+	\item \underline{Spektrum}: $= \text{spec}(\varphi) = \{ \lambda \in K \mid \lambda \text{ EW von } \varphi \}$
+	\item \underline{Eigenraum}: $= \text{Eig}(\varphi, \alpha)= \text{Kern}(\varphi - \alpha * \text{Id}_V) \\* (v \in \text{Kern}(\varphi - \alpha * \text{Id}_V) \Leftrightarrow \varphi(v) = \alpha*v) \\* \leadsto \alpha \in \text{spec}(\varphi) \Leftrightarrow \text{Eig}(\varphi, \alpha) \neq \{ 0 \}$
+	\item $D_{BB}(\varphi)$ Diagonalmatrix $\Rightarrow \text{spec}(\varphi) = \text{diag}(\varphi)$
+	\item Eigenräume sind invariante UVR
+	\item $| \text{spec}(\varphi) | \leq \text{dim}(V)$
+\end{items}
+
+\textbf{Eigenwerte und Polynome}:
+\begin{items}
+	\item $V$ K-VR, $\varphi \in \text{End}(V), f \in K[X] \\* \leadsto \lambda \in \text{spec}(\varphi) \Rightarrow f(\lambda) \in \text{spec}(f(\varphi))$
+	\item \underline{annulierendes Polynom}: $=f \in K[X]: f(\varphi)=0$
+	\item \underline{Verschwindungsideal}: $=K[X] \supseteq I(\varphi)=\{f \in K[X] \mid f(\varphi)=0 \}$
+	\item $V$ endl.-dim. K-VR. Dann:
+	\begin{enumeration}
+		\item $I(\varphi) \neq \{ 0 \} $
+		\item $\exists M \in I(\varphi): \text{grad}(M) \geq 0$ minimal, Leitkoeff. $1$
+		\item $\forall f \in I(\varphi) \ \exists g \in K[X]: f=M*g $
+	\end{enumeration}
+	\item \underline{Minimalpolynom}: $= \text{MP}_\varphi(X)=M$
+	\item $\text{MP}_\varphi(\lambda) = 0 \Leftrightarrow \lambda \in \text{spec}(\varphi) \\* \leadsto \text{spec}(\varphi) = \{ \lambda \in K \mid \text{MP}_\varphi(\lambda) = 0 \}$
+	\item \underline{Diagonalisierbarkeit}: $\varphi$ diagonalisierbar $\Leftrightarrow V$ hat Basis aus $\varphi$-EW \\* $\Leftrightarrow \text{MP}_\varphi(X) = (X-\alpha_1)\cdots(X-\alpha_k)$
+\end{items}
