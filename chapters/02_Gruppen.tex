@@ -1,63 +1,63 @@
 \section{\label{sec:Gruppen}Gruppen}
 
-  \textbf{Fundamentales}:
-  \begin{items}
-    \item \underline{Verknüpfung}: $\star : M \times M \rightarrow M$
-    \item \underline{Gruppe}: $(M,\star)$ mit:
-      \begin{enumeration}
-        \item $\star$ assoziativ
-        \item neutrales Element $e$ ($\forall m \in M: m \star e = e \star m = m$)
-        \item inverse Elemente $m^{-1}$ ($\forall m \in M: m \star m^{-1} = m^{-1} \star m = e$)
-      \end{enumeration}
-    \item \underline{abelsche Gruppe}: $\star$ kommutativ (auch kommutative Gruppe)
-  \end{items}
+\paragraph{Fundamentales}
+\begin{itemize}
+  \item \textbf{Verknüpfung}: $\star : M \times M \rightarrow M$
+  \item \textbf{Gruppe}: $(M,\star)$ mit:
+    \begin{enumerate}
+      \item $\star$ assoziativ
+      \item neutrales Element $e$ ($\forall m \in M: m \star e = e \star m = m$)
+      \item inverse Elemente $m^{-1}$ ($\forall m \in M: m \star m^{-1} = m^{-1} \star m = e$)
+    \end{enumerate}
+  \item \textbf{abelsche Gruppe}: $\star$ kommutativ (auch kommutative Gruppe)
+\end{itemize}
 
-  \textbf{Untergruppe}:
-  \begin{items}
-    \item $(H \subseteq G, \circ)$ Untergruppe von $(G, \star)$, wenn
-    \begin{enumeration}
-      \item $(H, \circ)$ Gruppe
-      \item $\forall h_1, h_2 \in H: h_1 \circ h_2 = h_1 \star h_2$
-    \end{enumeration}
-    \item \underline{Untergruppenkriterium}: $H \neq \varnothing \wedge \forall h_1, h_2 \in H: h_1 \star h_2^{-1} \in H$
-    \item \underline{Gruppendurchschnitt}: $G$ Gruppe, $I \neq \varnothing, \forall i \in I: U_i$ Untergruppe von $G$ $\leadsto \bigcap_{i \in I} U_i$ Untergruppe von $G$
-    \item \underline{Gruppenerzeugnis}: $M \subseteq G, I=\{ X: X \text{ Untergruppe von } G \wedge X \text{ enthält } M\}$, $\langle M \rangle=\bigcap_{X \in I} X$ Gruppenerzeugnis von $M$
-    \item \underline{zyklische Gruppe}: $\exists a \in G: G = \langle a \rangle$
-    \item \underline{Ordnung}:
-    \begin{enumeration}
-      \item Gruppe: Kardinalität von $G$
-      \item $g \in G$: $|\langle g \rangle |$
-    \end{enumeration}
-    \item $H$ Untergruppe von $G \Rightarrow |H|$ teilt $|G|$
-  \end{items}
+\paragraph{Untergruppe}
+\begin{itemize}
+  \item $(H \subseteq G, \circ)$ Untergruppe von $(G, \star)$, wenn
+  \begin{enumerate}
+    \item $(H, \circ)$ Gruppe
+    \item $\forall h_1, h_2 \in H: h_1 \circ h_2 = h_1 \star h_2$
+  \end{enumerate}
+  \item \textbf{Untergruppenkriterium}: $H \neq \varnothing \wedge \forall h_1, h_2 \in H: h_1 \star h_2^{-1} \in H$
+  \item \textbf{Gruppendurchschnitt}: $G$ Gruppe, $I \neq \varnothing, \forall i \in I: U_i$ Untergruppe von $G$ $\leadsto \bigcap_{i \in I} U_i$ Untergruppe von $G$
+  \item \textbf{Gruppenerzeugnis}: $M \subseteq G, I=\{ X: X \text{ Untergruppe von } G \wedge X \text{ enthält } M\}$, $\langle M \rangle=\bigcap_{X \in I} X$ Gruppenerzeugnis von $M$
+  \item \textbf{zyklische Gruppe}: $\exists a \in G: G = \langle a \rangle$
+  \item \textbf{Ordnung}:
+  \begin{enumerate}
+    \item Gruppe: Kardinalität von $G$
+    \item $g \in G$: $|\langle g \rangle |$
+  \end{enumerate}
+  \item $H$ Untergruppe von $G \Rightarrow |H|$ teilt $|G|$
+\end{itemize}
 
-  \textbf{Gruppenhomomorphismus}:
-  \begin{items}
-    \item $=f:G \rightarrow H \ \forall x,y \in G: f(x \star y) = f(x) \circ f(y)$
-    \item Eigenschaften:
-    \begin{enumeration}
-      \item $f(e_G) = e_H$
-      \item $\forall g \in G: f(g)^{-1} = f(g^{-1})$
-      \item $f^{-1}(\{ e_H \} )$ Untergruppe von $G$
-      \item $f$ injektiv $\Leftrightarrow f^{-1}(\{ e_H \} ) = \{ e_g \}$
-    \end{enumeration}
-    \item \underline{$\text{Hom}(G,H)$}: Menge der Gruppenhomomorphismen von $G$ nach $H$
-    \item \underline{Kern}: $=f^{-1}(\{ e_H \})$
-    \item \underline{Endomorphismus}: $f \in \text{Hom}(G,G) \Leftrightarrow f \in \text{End}(G)$
-    \item \underline{Isomorphismus}: $f \in \text{Hom}(G,H) \wedge f$ bijektiv $\leadsto f \in \text{Iso}(G,H)$ ($\text{Iso}(G,H) \neq \varnothing \Rightarrow G,H$ isomorph)
-    \item \underline{Automorphismus}: $f \in \text{End}(G) \wedge f$ bijektiv $\leadsto f \in \text{Aut}(G)$
-  \end{items}
+\paragraph{Gruppenhomomorphismus}
+\begin{itemize}
+  \item $=f:G \rightarrow H \ \forall x,y \in G: f(x \star y) = f(x) \circ f(y)$
+  \item Eigenschaften:
+  \begin{enumerate}
+    \item $f(e_G) = e_H$
+    \item $\forall g \in G: f(g)^{-1} = f(g^{-1})$
+    \item $f^{-1}(\{ e_H \} )$ Untergruppe von $G$
+    \item $f$ injektiv $\Leftrightarrow f^{-1}(\{ e_H \} ) = \{ e_g \}$
+  \end{enumerate}
+  \item \textbf{$\text{Hom}(G,H)$}: Menge der Gruppenhomomorphismen von $G$ nach $H$
+  \item \textbf{Kern}: $=f^{-1}(\{ e_H \})$
+  \item \textbf{Endomorphismus}: $f \in \text{Hom}(G,G) \Leftrightarrow f \in \text{End}(G)$
+  \item \textbf{Isomorphismus}: $f \in \text{Hom}(G,H) \wedge f$ bijektiv $\leadsto f \in \text{Iso}(G,H)$ ($\text{Iso}(G,H) \neq \varnothing \Rightarrow G,H$ isomorph)
+  \item \textbf{Automorphismus}: $f \in \text{End}(G) \wedge f$ bijektiv $\leadsto f \in \text{Aut}(G)$
+\end{itemize}
 
-  \textbf{Symmetrische Gruppe}:
-  \begin{items}
-    \item $D \text{ Menge}, M := \{ f \in \text{Abb}(D,D): f \text{ bijektiv} \}$ Gruppe mit Komposition $\leadsto$ symmetrische Gruppe $\text{Sym}_D = (M, \circ)$
-    \item $D=\{ 1,\dots ,n \} \Rightarrow \text{Sym}_D =: S_n$ Permutationen der ersten $n$ Zahlen aus $\N$, $|S_n|=n!$
-    \item \underline{$d$-Zykel}: $d \leq n$ Elemente aus $S_n$ werden im Kreis getauscht
-    \item \underline{Transposition}: Zwei Elemente werden vertauscht ($2$-Zykel)
-    \item \underline{Zerlegung}: Permutation zerlegbar in Transpositionen (durch Komposition): $\sigma = \tau_1 \circ \cdots \circ \tau_k$
-    \item \underline{Signum}:
-    \begin{enumeration}
-      \item Transposition: $\text{sgn}(\tau)=-1$
-      \item Permutation: $\sigma = \tau_1 \circ \cdots \circ \tau_k \leadsto \text{sgn}(\sigma)={(-1)}^{k}$
-    \end{enumeration}
-  \end{items}
+\paragraph{Symmetrische Gruppe}
+\begin{itemize}
+  \item $D \text{ Menge}, M := \{ f \in \text{Abb}(D,D): f \text{ bijektiv} \}$ Gruppe mit Komposition $\leadsto$ symmetrische Gruppe $\text{Sym}_D = (M, \circ)$
+  \item $D=\{ 1,\dots ,n \} \Rightarrow \text{Sym}_D =: S_n$ Permutationen der ersten $n$ Zahlen aus $\N$, $|S_n|=n!$
+  \item \textbf{$d$-Zykel}: $d \leq n$ Elemente aus $S_n$ werden im Kreis getauscht
+  \item \textbf{Transposition}: Zwei Elemente werden vertauscht ($2$-Zykel)
+  \item \textbf{Zerlegung}: Permutation zerlegbar in Transpositionen (durch Komposition): $\sigma = \tau_1 \circ \cdots \circ \tau_k$
+  \item \textbf{Signum}:
+  \begin{enumerate}
+    \item Transposition: $\text{sgn}(\tau)=-1$
+    \item Permutation: $\sigma = \tau_1 \circ \cdots \circ \tau_k \leadsto \text{sgn}(\sigma)={(-1)}^{k}$
+  \end{enumerate}
+\end{itemize}

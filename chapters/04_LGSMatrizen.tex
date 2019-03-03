@@ -1,56 +1,56 @@
-\section{\label{sec:LGSMatrizen}Lineare Gleichungssysteme und Matrizen}
+\section{\label{sec:LGSMatrizen}LGS und Matrizen}
 
-  \textbf{Grundlegendes -- LGS}:
-  \begin{items}
-    \item $p$ Gleichungen mit $q$ Unbekannten über kommutativem Ring $R$
-    \item Kurzschreibweise $\sum_{j=1}^q a_{ij}x_j=b_i \ (1 \leq i \leq p) \qquad\qquad\qquad\quad (\star)$
-    \item \underline{Lösungsmenge}: $\mathcal{L}(\star)$
-    \item \underline{homogenes LGS}: $\sum_{j=1}^q a_{ij}x_j=0 \ (1 \leq i \leq p)$
-  \end{items}
+\paragraph{Grundlegendes --- LGS}
+\begin{itemize}
+  \item $p$ Gleichungen mit $q$ Unbekannten über kommutativem Ring $R$
+  \item Kurzschreibweise $\sum_{j=1}^q a_{ij}x_j=b_i \ (1 \leq i \leq p) \qquad\qquad\qquad\quad (\star)$
+  \item \textbf{Lösungsmenge}: $\mathcal{L}(\star)$
+  \item \textbf{homogenes LGS}: $\sum_{j=1}^q a_{ij}x_j=0 \ (1 \leq i \leq p)$
+\end{itemize}
 
-  \textbf{Grundlegendes -- Matrix}:
-  \begin{items}
-    \item $=A:\{ 1,\dots,p \} \times \{ 1,\dots,q \} \rightarrow R$ \\* ($R$ kommutativer Ring, $p,q \in \N$, $p=\#$Zeilen, $q=\#$Spalten)
-    \item $a_{ij}=A(i,j)=\begin{pmatrix} a_{11} & \cdots & a_{1q} \\ \vdots & \ddots & \vdots \\ a_{p1} & \cdots & a_{pq} \end{pmatrix}$
-    \item $R^{p \times q} =$ Menge der $p \times q$-Matrizen über $R$
-    \item \underline{Produkt}: $A \in R^{p \times q}, B \in R^{q \times r}$. $A*B=:C \in R^{p \times r}: \\* c_{ij}$ $i$te Zeile von $A$ * $j$te Spalte von $B$ \\* $D(A+B)=DA+DB, (A+B)D' = AD'+BD'$ (Distributivität) \\* i.A.: $AB \neq BA$ (keine Kommutativität)
-    \item \underline{Summe}: $A \in R^{p \times q}, B \in R^{p \times q}$. $A+B=:C \in R^{p \times q}: \\* c_{ij} = a_{ij}+b_{ij}$
-    \item \underline{Nullmatrix}: $\forall i,j: a_{ij}=0 (=: 0)$
-    \item \underline{Einheitsmatrix}: $\forall i,j: a_{ij}=\begin{cases} 1, \text{ falls } i=j \\ 0 \text{ sonst} \end{cases}=: I_p \in R^{p \times p}$
-    \item \underline{Skalare}: $=r \in R: A*r=r*A=(r*a_{ij})_{i,j}$
-    \item \underline{Transponierte Matrix}: $A^{T}(j,i)=A(i,j)$ (gedreht um Diagonale) \\* $\leadsto (A*B)^T=B^T*A^T$
-    \item $\leadsto (R^{p \times p},+,*)$ ist Ring (Einselement $I_p$, Nullelement $0$)
-    \item \underline{Symmetrische Matrix}: \( = A \in K^{n \times n}: A^\top  = A \)
-  \end{items}
+\paragraph{Grundlegendes --- Matrix}
+\begin{itemize}
+  \item $=A:\{ 1,\dots,p \} \times \{ 1,\dots,q \} \rightarrow R$ \\* ($R$ kommutativer Ring, $p,q \in \N$, $p=\#$Zeilen, $q=\#$Spalten)
+  \item $a_{ij}=A(i,j)=\begin{pmatrix} a_{11} & \cdots & a_{1q} \\ \vdots & \ddots & \vdots \\ a_{p1} & \cdots & a_{pq} \end{pmatrix}$
+  \item $R^{p \times q} =$ Menge der $p \times q$-Matrizen über $R$
+  \item \textbf{Produkt}: $A \in R^{p \times q}, B \in R^{q \times r}$. $A*B=:C \in R^{p \times r}: \\* c_{ij}$ $i$te Zeile von $A$ * $j$te Spalte von $B$ \\* $D(A+B)=DA+DB, (A+B)D' = AD'+BD'$ (Distributivität) \\* i.A.: $AB \neq BA$ (keine Kommutativität)
+  \item \textbf{Summe}: $A \in R^{p \times q}, B \in R^{p \times q}$. $A+B=:C \in R^{p \times q}: \\* c_{ij} = a_{ij}+b_{ij}$
+  \item \textbf{Nullmatrix}: $\forall i,j: a_{ij}=0 (=: 0)$
+  \item \textbf{Einheitsmatrix}: $\forall i,j: a_{ij}=\begin{cases} 1, \text{ falls } i=j \\ 0 \text{ sonst} \end{cases}=: I_p \in R^{p \times p}$
+  \item \textbf{Skalare}: $=r \in R: A*r=r*A=(r*a_{ij})_{i,j}$
+  \item \textbf{Transponierte Matrix}: $A^{T}(j,i)=A(i,j)$ (gedreht um Diagonale) \\* $\leadsto (A*B)^T=B^T*A^T$
+  \item $\leadsto (R^{p \times p},+,*)$ ist Ring (Einselement $I_p$, Nullelement $0$)
+  \item \textbf{Symmetrische Matrix}: \( = A \in K^{n \times n}: A^\top  = A \)
+\end{itemize}
 
-  \textbf{Invertierbare Matrix}:
-  \begin{items}
-    \item $\underline{GL_p(R)}=\{ A \in R^{p \times p}\ |\  \exists B \in R^{p \times p} : AB=BA=I_p \} \\* (={(R^{p \times p})}^{\times}, B=:A^{-1}$, Menge der invertierbaren Matrizen)
-    \item \underline{Elementarmatrix}: $E_{i_j}(k,l)=\begin{cases} 1, \text{ falls } i=k \wedge j=l \\ 0 \text{ sonst} \end{cases}$
-    \item \underline{Umformungsmatrizen}:
-    \begin{enumeration}
-      \item Addition: $A_{i,j}(\alpha)=I_p+\alpha E_{i,j} \in GL_p(R) \\* \leadsto \alpha$-mal $j$te Zeile zur $i$ten Zeile addieren
-      \item Vertauschung: $V_{i,j}=I_p-E_{i,i}-E_{j,j}+E_{i,j}+E_{j,i} \in GL_p(R) \\* \leadsto$ tauschen der $i$ten und $j$ten Zeile
-      \item Diagonal: $\text{diag}(\alpha_1,\dots,\alpha_p)=\sum_{i=1}^p \alpha_i E_{i,i} \in GL_p(R) \\* \leadsto i$te Zeile mit $\alpha_i$ multiplizieren
-    \end{enumeration}
-    \item \underline{\textsc{Gauß}-Normalform}: $=$ LGS in Treppenform \\*
-       $\leadsto$ Lösen durch Anwenden von Umformungsmatrizen
-    \item \underline{Rang}: $= \#$ nichtleerer Zeilen in Gauß-Normalform
-    \item \underline{Spur}: $=$ Summe der Diagonaleinträge
-    \item \underline{Gauß-Algorithmus}: $A^{-1}$ für $A \in K^{p \times p}$ bestimmen:
-    \begin{enumeration}
-      \item $(A \mid Id_p)$ aufschreiben
-      \item $A$ zu $Id_p$ umformen, Umformungen auch auf $Id_p$ anwenden
-      \item Man erhält $(Id_p \mid A^{-1})$. Klappt nicht $\Rightarrow$ $A \not \in GL_p(K)$
-    \end{enumeration}
-    \item \underline{Reguläre Matrix}: $A \in K^{p \times p}$ regulär $\Leftrightarrow A$ invertierbar $\Leftrightarrow \exists A^{-1} \\* \Leftrightarrow \text{Rang}(A)=p$
-    \item Rechenregeln:
-    \begin{enumeration}
-      \item $(A*B)^{-1}=B^{-1}*A^{-1}$
-      \item $(A^T)^{-1}=(A^{-1})^T$
-      \item $(A^{-1})^{-1}=A$
-      \item $(k*A)^{-1} = k^{-1}*A^{-1}$
-    \end{enumeration}
-    \item \underline{Äquivalente Matrizen}: $A,B \in K^{p \times q}$ äquivalent \\* $\Leftrightarrow \exists S \in \text{GL}_q(K), T \in \text{GL}_p(K): B=T*A*S$
-    \item \underline{Ähnliche Matrizen}: $A,\tilde{A} \in K^{d \times d}$ ähnlich \\* $\Leftrightarrow \exists S \in \text{GL}_d(K): \tilde{A}=S^{-1}*A*S \\* \leadsto \text{Rang}(A)=\text{Rang}(\tilde{A}), \ \text{Spur}(A)=\text{Spur}(\tilde{A})$
-  \end{items}
+\paragraph{Invertierbare Matrix}
+\begin{itemize}
+  \item $ GL_p(R) =\{ A \in R^{p \times p}\ |\  \exists B \in R^{p \times p} : AB=BA=I_p \} \\* (={(R^{p \times p})}^{\times}, B=:A^{-1}$, Menge der invertierbaren Matrizen)
+  \item \textbf{Elementarmatrix}: $E_{i_j}(k,l)=\begin{cases} 1, \text{ falls } i=k \wedge j=l \\ 0 \text{ sonst} \end{cases}$
+  \item \textbf{Umformungsmatrizen}:
+  \begin{enumerate}
+    \item Addition: $A_{i,j}(\alpha)=I_p+\alpha E_{i,j} \in GL_p(R) \\* \leadsto \alpha$-mal $j$te Zeile zur $i$ten Zeile addieren
+    \item Vertauschung: $V_{i,j}=I_p-E_{i,i}-E_{j,j}+E_{i,j}+E_{j,i} \in GL_p(R) \\* \leadsto$ tauschen der $i$ten und $j$ten Zeile
+    \item Diagonal: $\text{diag}(\alpha_1,\dots,\alpha_p)=\sum_{i=1}^p \alpha_i E_{i,i} \in GL_p(R) \\* \leadsto i$te Zeile mit $\alpha_i$ multiplizieren
+  \end{enumerate}
+  \item \textbf{\textsc{Gauß}-Normalform}: $=$ LGS in Treppenform \\*
+      $\leadsto$ Lösen durch Anwenden von Umformungsmatrizen
+  \item \textbf{Rang}: $= \#$ nichtleerer Zeilen in Gauß-Normalform
+  \item \textbf{Spur}: $=$ Summe der Diagonaleinträge
+  \item \textbf{Gauß-Algorithmus}: $A^{-1}$ für $A \in K^{p \times p}$ bestimmen:
+  \begin{enumerate}
+    \item $(A \mid Id_p)$ aufschreiben
+    \item $A$ zu $Id_p$ umformen, Umformungen auch auf $Id_p$ anwenden
+    \item Man erhält $(Id_p \mid A^{-1})$. Klappt nicht $\Rightarrow$ $A \not \in GL_p(K)$
+  \end{enumerate}
+  \item \textbf{Reguläre Matrix}: $A \in K^{p \times p}$ regulär $\Leftrightarrow A$ invertierbar $\Leftrightarrow \exists A^{-1} \\* \Leftrightarrow \text{Rang}(A)=p$
+  \item Rechenregeln:
+  \begin{enumerate}
+    \item $(A*B)^{-1}=B^{-1}*A^{-1}$
+    \item $(A^T)^{-1}=(A^{-1})^T$
+    \item $(A^{-1})^{-1}=A$
+    \item $(k*A)^{-1} = k^{-1}*A^{-1}$
+  \end{enumerate}
+  \item \textbf{Äquivalente Matrizen}: $A,B \in K^{p \times q}$ äquivalent \\* $\Leftrightarrow \exists S \in \text{GL}_q(K), T \in \text{GL}_p(K): B=T*A*S$
+  \item \textbf{Ähnliche Matrizen}: $A,\tilde{A} \in K^{d \times d}$ ähnlich \\* $\Leftrightarrow \exists S \in \text{GL}_d(K): \tilde{A}=S^{-1}*A*S \\* \leadsto \text{Rang}(A)=\text{Rang}(\tilde{A}), \ \text{Spur}(A)=\text{Spur}(\tilde{A})$
+\end{itemize}

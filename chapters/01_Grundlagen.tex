@@ -1,35 +1,36 @@
 \section{\label{sec:Grundlagen}Allgemeine Grundlagen}
-  \textbf{Menge}:
-  \begin{items}
-    \item ``Ansammlung von Objekten''
-    \item Wichtige Mengen: $\varnothing, \N, \Z, \Q, \R, \mathcal{P}(M)$ (Potenzmenge)
-    \item Operationen: $A\cup B, A\cap B, A\setminus B, A\times B, A^n, |A|$
-  \end{items}
 
-  \textbf{Abbildung}:
-  \begin{items}
-    \item ``Vorschrift, die jedem Element einer Menge genau ein Element einer anderen Menge zuordnet''
-    \item $f:  M\ni m \mapsto n \in N$
-    \item $\text{Abb}(M,N) = \{ f:M\rightarrow N \}$
-    \item \underline{Identität}: $Id_m: M \ni m \mapsto m \in M$
-    \item \underline{Komposition}: $f:M\rightarrow N, g:N\rightarrow O; g\circ f: M\rightarrow O$ ($=g(f(m))$)
-    \item \underline{Einschränkung}: $f:M\rightarrow N, T\subset M; f\mid_T:T\rightarrow N$
-    \item \underline{Bild}: $f(U)=\{ y \in N \mid \exists m \in U: f(m)=y \}$
-    \item \underline{Urbild}: $f^{-1}(V)= \{ m \in M \mid f(m) \in V \}$
-    \item \underline{Injektivität}: $f(x)=f(x') \Rightarrow x=x'$ (kein $n \in N$ wird mehrfach getroffen, z.B. $f(x)=x^3$)
-    \item \underline{Surjektivität}: $\forall n \in N \ \exists m \in M: f(m)=n$ ($f$ trifft jedes $n \in N$, z.B. $f(x)=x^3$)
-    \item \underline{Bijektivität}: Injektiv und Surjektiv ($\exists g:N \rightarrow M: g \circ f = Id_M \wedge f \circ g = Id_N \leadsto g=:f^{-1}$ Umkehrabbildung)
-  \end{items}
+\paragraph{Menge}
+\begin{itemize}
+  \item ``Ansammlung von Objekten''
+  \item Wichtige Mengen: $\varnothing, \N, \Z, \Q, \R, \mathcal{P}(M)$ (Potenzmenge)
+  \item Operationen: $A\cup B, A\cap B, A\setminus B, A\times B, A^n, |A|$
+\end{itemize}
 
-  \textbf{Relation}:
-  \begin{items}
-    \item $R \subseteq M \times M$
-    \item $xRy$ statt $(x,y) \in R$
-    \item \underline{Reflexivität}: $\forall x \in M: xRx$
-    \item \underline{Symmetrie}: $\forall x,y \in M: xRy \Leftrightarrow yRx$
-    \item \underline{Transitivität}: $\forall x,y,z \in M: xRy \wedge yRz \Rightarrow xRz$
-    \item \underline{Äquivalenzrelation}: reflexiv, transitiv, symmetrisch (z.B. $=$)
-    \item \underline{Antisymmetrisch}: $\forall x,y \in M: xRy \wedge yRx \Rightarrow x=y$
-    \item \underline{Halbordnung}: reflexiv, transitiv, antisymmetrisch (z.B. $\leq$ auf $\R$)
-    \item \underline{Ordnung}: totale Halbordnung ($\forall x,y \in M: xRy \vee yRx$)
-  \end{items}
+\paragraph{Abbildung}
+\begin{itemize}
+  \item ``Vorschrift, die jedem Element einer Menge genau ein Element einer anderen Menge zuordnet''
+  \item $f:  M\ni m \mapsto n \in N$
+  \item $\text{Abb}(M,N) = \{ f:M\rightarrow N \}$
+  \item \textbf{Identität}: $Id_m: M \ni m \mapsto m \in M$
+  \item \textbf{Komposition}: $f:M\rightarrow N, g:N\rightarrow O; g\circ f: M\rightarrow O$ ($=g(f(m))$)
+  \item \textbf{Einschränkung}: $f:M\rightarrow N, T\subset M; f\mid_T:T\rightarrow N$
+  \item \textbf{Bild}: $f(U)=\{ y \in N \mid \exists m \in U: f(m)=y \}$
+  \item \textbf{Urbild}: $f^{-1}(V)= \{ m \in M \mid f(m) \in V \}$
+  \item \textbf{Injektivität}: $f(x)=f(x') \Rightarrow x=x'$ (kein $n \in N$ wird mehrfach getroffen, z.B. $f(x)=x^3$)
+  \item \textbf{Surjektivität}: $\forall n \in N \ \exists m \in M: f(m)=n$ ($f$ trifft jedes $n \in N$, z.B. $f(x)=x^3$)
+  \item \textbf{Bijektivität}: Injektiv und Surjektiv ($\exists g:N \rightarrow M: g \circ f = Id_M \wedge f \circ g = Id_N \leadsto g=:f^{-1}$ Umkehrabbildung)
+\end{itemize}
+
+\paragraph{Relation}
+\begin{itemize}
+  \item $R \subseteq M \times M$
+  \item $xRy$ statt $(x,y) \in R$
+  \item \textbf{Reflexivität}: $\forall x \in M: xRx$
+  \item \textbf{Symmetrie}: $\forall x,y \in M: xRy \Leftrightarrow yRx$
+  \item \textbf{Transitivität}: $\forall x,y,z \in M: xRy \wedge yRz \Rightarrow xRz$
+  \item \textbf{Äquivalenzrelation}: reflexiv, transitiv, symmetrisch (z.B. $=$)
+  \item \textbf{Antisymmetrisch}: $\forall x,y \in M: xRy \wedge yRx \Rightarrow x=y$
+  \item \textbf{Halbordnung}: reflexiv, transitiv, antisymmetrisch (z.B. $\leq$ auf $\R$)
+  \item \textbf{Ordnung}: totale Halbordnung ($\forall x,y \in M: xRy \vee yRx$)
+\end{itemize}

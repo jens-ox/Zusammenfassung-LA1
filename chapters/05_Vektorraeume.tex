@@ -1,80 +1,78 @@
 \section{\label{sec:Vektorraeume}Vektorräume}
 
-\textbf{Grundlagen}:
-\begin{items}
-	\item \underline{Vektorraum} (über Körper $K$): \\* $=(V,\oplus,\odot), \oplus: V \times V \rightarrow V, \odot: K \times V \rightarrow V$ mit
-	\begin{enumeration}
+\paragraph{Grundlagen}
+\begin{itemize}
+	\item \textbf{Vektorraum} (über Körper $K$): \\* $=(V,\oplus,\odot), \oplus: V \times V \rightarrow V, \odot: K \times V \rightarrow V$ mit
+	\begin{enumerate}
 		\item $(V,\oplus)$ kommutative Gruppe
 		\item $\forall v \in V: 1_K*v=v$
 		\item $\oplus$ assoziativ
 		\item Distributivität
-	\end{enumeration}
-	\item \underline{Untervektorraum}: $=(U,\oplus,\odot) \leq (V,\oplus,\odot)$ mit
-	\begin{enumeration}
+	\end{enumerate}
+	\item \textbf{Untervektorraum}: $=(U,\oplus,\odot) \leq (V,\oplus,\odot)$ mit
+	\begin{enumerate}
 		\item $(U,\oplus)$ Untergruppe von $(V,\oplus)$
 		\item $\forall a \in K, u \in U: a*u \in U$
-	\end{enumeration}
-	\item \underline{UVR-Kriterium}: $U \leq V \\* \Leftrightarrow U \neq \varnothing \wedge \forall u_1, u_2 \in U: u_1+u_2 \in U \wedge \forall a \in K, u \in U: a*u \in U$
-	\item \underline{UVR-Durchschnitt}: $V \text{ K-VR}, \forall i \in I: U_i \leq V \Rightarrow \bigcap_{i \in I} U_i \leq V$
-	\item \underline{Linearkombination}: $=\sum_{m \in M} \alpha(m)*m \in V \\* (M \subseteq \text{ K-VR } V, \alpha: M \rightarrow K=0 \text{ ffa } m \in M)$
-	\item \underline{Aufspann}: $=\langle M \rangle$, Menge aller Linearkombinationen in $M$ \\* $=$ Hülle von $M$
-	\item \underline{Erzeugendensystem}: $M$ ist Erzeugendensystem von $\langle M \rangle$
-	\item \underline{Träger}: $\text{Träger}(\alpha \in \text{Abb}(M,K))=\{ m \in M \mid \alpha(m) \neq 0 \} \\* \leadsto \text{Abb}(M,K)_0=\{ f \in \text{Abb}(M,k) \mid \text{Träger}(f) < \infty \}$
-	\item \underline{UVR-Summe}: $\forall i \in I: U_i \leq V$. $\sum_{i \in I} U_i = \langle \bigcup_{i \in I} U_i \rangle$
-	\item \underline{direkte UVR-Summe}: $\Leftrightarrow \forall u_i \in U_i : \\* (u_1 + \cdots + u_n = 0 \Leftrightarrow u_1 = \cdots = u_n = 0) \\* \leadsto U_i \cap U_j = \{ 0 \} \ (i \neq j) \\* \leadsto \bigoplus_{i=1}^n U_i$ statt $\sum_{i=1}^n U_i$
-\end{items}
+	\end{enumerate}
+	\item \textbf{UVR-Kriterium}: $U \leq V \\* \Leftrightarrow U \neq \varnothing \wedge \forall u_1, u_2 \in U: u_1+u_2 \in U \wedge \forall a \in K, u \in U: a*u \in U$
+	\item \textbf{UVR-Durchschnitt}: $V \text{ K-VR}, \forall i \in I: U_i \leq V \Rightarrow \bigcap_{i \in I} U_i \leq V$
+	\item \textbf{Linearkombination}: $=\sum_{m \in M} \alpha(m)*m \in V \\* (M \subseteq \text{ K-VR } V, \alpha: M \rightarrow K=0 \text{ ffa } m \in M)$
+	\item \textbf{Aufspann}: $=\langle M \rangle$, Menge aller Linearkombinationen in $M$ \\* $=$ Hülle von $M$
+	\item \textbf{Erzeugendensystem}: $M$ ist Erzeugendensystem von $\langle M \rangle$
+	\item \textbf{Träger}: $\text{Träger}(\alpha \in \text{Abb}(M,K))=\{ m \in M \mid \alpha(m) \neq 0 \} \\* \leadsto \text{Abb}(M,K)_0=\{ f \in \text{Abb}(M,k) \mid \text{Träger}(f) < \infty \}$
+	\item \textbf{UVR-Summe}: $\forall i \in I: U_i \leq V$. $\sum_{i \in I} U_i = \langle \bigcup_{i \in I} U_i \rangle$
+	\item \textbf{direkte UVR-Summe}: $\Leftrightarrow \forall u_i \in U_i : \\* (u_1 + \cdots + u_n = 0 \Leftrightarrow u_1 = \cdots = u_n = 0) \\* \leadsto U_i \cap U_j = \{ 0 \} \ (i \neq j) \\* \leadsto \bigoplus_{i=1}^n U_i$ statt $\sum_{i=1}^n U_i$
+\end{itemize}
 
-\textbf{VR-Homomorphismus}:
-\begin{items}
+\paragraph{VR-Homomorphismus}
+\begin{itemize}
 	\item $= \varphi: V \rightarrow W$ mit
-	\begin{enumeration}
+	\begin{enumerate}
 		\item $\forall u,v \in V: \varphi(u+v) = \varphi(u)+\varphi(v)$
 		\item $\forall \alpha \in K, v \in V: \varphi(\alpha*v)=\alpha*\varphi(v)$
-	\end{enumeration}
-	\item \underline{lineare Abbildung}: $=$ VR-Hom.
-	\item \underline{Aut, End, Iso}: Wie Gruppenhom.
-	\item \underline{Kern}: $\text{Kern}(\varphi)=\varphi^{-1}(\{ 0 \})$
+	\end{enumerate}
+	\item \textbf{lineare Abbildung}: $=$ VR-Hom.
+	\item \textbf{Aut, End, Iso}: Wie Gruppenhom.
+	\item \textbf{Kern}: $\text{Kern}(\varphi)=\varphi^{-1}(\{ 0 \})$
 	\item $\varphi$ injektiv $\Leftrightarrow \text{Kern}(\varphi) = \{ 0 \}$
 	\item $\text{Hom}(V,W) \leq \text{Abb}(V,W)$
 	\item $K^{p \times q} \ni A \mapsto \varphi_A \in \text{Hom}(K^q, K^p)$ ist K-VR-Iso. \\* ($A \in K^{p \times q}, \varphi_A: K^q \rightarrow K^p, v \mapsto \varphi_A(v)=A*v $)
-\end{items}
+\end{itemize}
 
-\textbf{Basis}:
-\begin{items}
+\paragraph{Basis}
+\begin{itemize}
 	\item $=B \subseteq V \ \forall v \in V: \exists ! \lambda \in \text{Abb}(B,K)_0:  v=\sum_{b \in B} \lambda(b)*b$ \\* (jedes $v \in V$ lässt sich eindeutig als Linearkombination von $B$-Vektoren schreiben, $B$ ist \emph{minimales Erzeugendensystem})
 	\item $\mid \text{Basis von } K^p \mid = p$
-	\item \underline{Koordinatenabbildung}: $D_B(v): V \rightarrow \text{Abb}(M,K)_0$ \\* Koordinatenvektor von $v$ bzgl. $B$
-	\item \underline{Lineare Unabhängigkeit}: $M \subset V$ lin. unabh. $\\* \Leftrightarrow \forall \lambda \in \text{Abb}(M,K)_0: (\sum_{m \in M} \lambda(m)*m=0 \Leftrightarrow \lambda = 0) \\* (\Leftrightarrow 0$ kann nicht linearkombiniert werden, sonst lin. abh.)
+	\item \textbf{Koordinatenabbildung}: $D_B(v): V \rightarrow \text{Abb}(M,K)_0$ \\* Koordinatenvektor von $v$ bzgl. $B$
+	\item \textbf{Lineare Unabhängigkeit}: $M \subset V$ lin. unabh. $\\* \Leftrightarrow \forall \lambda \in \text{Abb}(M,K)_0: (\sum_{m \in M} \lambda(m)*m=0 \Leftrightarrow \lambda = 0) \\* (\Leftrightarrow 0$ kann nicht linearkombiniert werden, sonst lin. abh.)
 	\item $B$ Basis \\* $\Leftrightarrow B$ maximal linear unabhängig \\* $\Leftrightarrow B$ minimales Erzeugendensystem \\* $\Leftrightarrow B$ linear unabhängiges Erzeugendensystem
-	\item \underline{Existenz}: $V$ K-VR mit endlichem Erzeugendensystem \\* $\Leftrightarrow V$ hat Basis \\* $\Leftrightarrow$ Basis in jedem endl. $V$-Erzeugendensystem enthalten \\* $\Leftrightarrow$ jedes lin. unabh. $M \subset V$ lässt sich zu Basis \emph{ergänzen} \\* $\Leftrightarrow$ alle $V$-Basen haben gleich viele Elemente
-\end{items}
+	\item \textbf{Existenz}: $V$ K-VR mit endlichem Erzeugendensystem \\* $\Leftrightarrow V$ hat Basis \\* $\Leftrightarrow$ Basis in jedem endl. $V$-Erzeugendensystem enthalten \\* $\Leftrightarrow$ jedes lin. unabh. $M \subset V$ lässt sich zu Basis \emph{ergänzen} \\* $\Leftrightarrow$ alle $V$-Basen haben gleich viele Elemente
+\end{itemize}
 
-\textbf{Dimension}:
-\begin{items}
+\paragraph{Dimension}
+\begin{itemize}
 	\item $=\text{dim}_K(V)=|B|$ ($B$ Basis von $V$)
-	\item \underline{Dimension UVR}: $U \leq V \Rightarrow \text{dim}_K(U) \leq \text{dim}_K(V) \\* \leadsto \text{dim}_K(U)=\text{dim}_K(V) \Leftrightarrow U=V$ \\* direkte Summe: $\text{dim}_K(\bigoplus_{i=1}^n U_i) = \sum_{i=1}^n \text{dim}_K(U_i)$
+	\item \textbf{Dimension UVR}: $U \leq V \Rightarrow \text{dim}_K(U) \leq \text{dim}_K(V) \\* \leadsto \text{dim}_K(U)=\text{dim}_K(V) \Leftrightarrow U=V$ \\* direkte Summe: $\text{dim}_K(\bigoplus_{i=1}^n U_i) = \sum_{i=1}^n \text{dim}_K(U_i)$
 	\item $U,W \leq V \Rightarrow \text{dim}(U+W)=\text{dim}(U)+\text{dim}(W)-\text{dim}(U\cap W)$
-	\item \underline{komplementärer UVR}: $W$ komplementär zu $U \Leftrightarrow V=U \oplus W \\* \leadsto \text{dim}(V)=\text{dim}(U)+\text{dim}(W)$
-\end{items}
+	\item \textbf{komplementärer UVR}: $W$ komplementär zu $U \Leftrightarrow V=U \oplus W \\* \leadsto \text{dim}(V)=\text{dim}(U)+\text{dim}(W)$
+\end{itemize}
 
-\newpage
-
-\textbf{Faktorraum}:
-\begin{items}
-	\item \underline{$\sim$}: $v_1 \sim v_2 \Leftrightarrow v_1 - v_2 \in U$ ($U \leq V$) \\* $\leadsto v_1$ und $v_2$ unterscheiden sich um $u \in U$
-	\item \underline{$[v]$}: $=v+U= \{ v+u \mid u \in U \}$
-	\item \underline{$V/U$}: $=\{ [v] \mid v \in V \}$ ist VR:
-	\begin{enumeration}
+\paragraph{Faktorraum}
+\begin{itemize}
+	\item \textbf{$\sim$}: $v_1 \sim v_2 \Leftrightarrow v_1 - v_2 \in U$ ($U \leq V$) \\* $\leadsto v_1$ und $v_2$ unterscheiden sich um $u \in U$
+	\item \textbf{$[v]$}: $=v+U= \{ v+u \mid u \in U \}$
+	\item \textbf{$V/U$}: $=\{ [v] \mid v \in V \}$ ist VR:
+	\begin{enumerate}
 		\item $[v_1+v_2]=[v_1]+[v_2]$
 		\item $\lambda [v] = [\lambda v]$
-	\end{enumeration}
-	\item \underline{Faktorraum}: $=V/U$
-	\item \underline{kanonische Projektion}: $\Pi_{V/U}: V \rightarrow V/U, v \mapsto [v] \\* \leadsto \text{Kern}(\Pi_{V/U})=U$
-	\item \underline{Homomorphiesatz}: $V,W$ K-VRe, $\varphi \in \text{Hom}(V,W), U \leq \text{Kern}(\varphi)$
-	\begin{enumeration}
+	\end{enumerate}
+	\item \textbf{Faktorraum}: $=V/U$
+	\item \textbf{kanonische Projektion}: $\Pi_{V/U}: V \rightarrow V/U, v \mapsto [v] \\* \leadsto \text{Kern}(\Pi_{V/U})=U$
+	\item \textbf{Homomorphiesatz}: $V,W$ K-VRe, $\varphi \in \text{Hom}(V,W), U \leq \text{Kern}(\varphi)$
+	\begin{enumerate}
 		\item $\exists ! \tilde{\varphi}: V/U \rightarrow \varphi(V) \leq W \ \forall v \in V: \varphi(v)= \tilde{\varphi}([v])$
 		\item $U=\text{Kern}(\varphi) \Rightarrow \tilde{\varphi} \in \text{Iso}(V/U, \varphi(V))$
-	\end{enumeration}
-	\item \underline{Basis}: $U \leq V, \langle B \rangle = V, \langle B_U \rangle = U, B_U \subset B. \\* \leadsto C=\{ b+U \mid b \in B \setminus B_U \}$ Basis von $V/U \\* \leadsto \text{dim}(V/U) = \text{dim}(V)-\text{dim}(U) \\* \leadsto \text{dim}(\text{Bild}(\varphi)) = \text{dim}(V)-\text{dim}(\text{Kern}(\varphi))$
-	\item \underline{Rang}: $\text{Rang}(\varphi)=\text{dim}(\text{Bild}(\varphi))$
-\end{items}
+	\end{enumerate}
+	\item \textbf{Basis}: $U \leq V, \langle B \rangle = V, \langle B_U \rangle = U, B_U \subset B. \\* \leadsto C=\{ b+U \mid b \in B \setminus B_U \}$ Basis von $V/U \\* \leadsto \text{dim}(V/U) = \text{dim}(V)-\text{dim}(U) \\* \leadsto \text{dim}(\text{Bild}(\varphi)) = \text{dim}(V)-\text{dim}(\text{Kern}(\varphi))$
+	\item \textbf{Rang}: $\text{Rang}(\varphi)=\text{dim}(\text{Bild}(\varphi))$
+\end{itemize}

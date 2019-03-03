@@ -1,36 +1,36 @@
 \section{\label{sec:BasenLinAbb}Basen und lineare Abbildungen}
 
-\textbf{Lineare Fortsetzung}:
-\begin{items}
+\paragraph{Lineare Fortsetzung}
+\begin{itemize}
 	\item $V, W$ K-VRe, $\langle B \rangle = V, \varphi \in \text{Hom}(V,W) \\* \leadsto \varphi$ durch $\varphi|_B: V \rightarrow W$ eindeutig festgelegt \\* ($\varphi(v)=\sum_{b \in B} \lambda(b) * \varphi|_B(b) $)
 	\item $V, W, B$ s.o., $f \in \text{Abb}(B,W) \Rightarrow \exists ! \varphi: V \rightarrow W: \varphi|_B = f \\* \leadsto (\text{Hom}(V,W) \ni \varphi \mapsto \varphi|_B \in \text{Abb}(B,W)) \\* \in \text{Iso}(\text{Hom}(V,W), \text{Abb}(B,W))$
-\end{items}
+\end{itemize}
 
-\textbf{Dualraum}:
-\begin{items}
-	\item \underline{Linearform} (auf $V$): $= \chi \in \text{Hom}(V,K)$
-	\item \underline{Dualraum}: $=V^{*} = \text{Hom}(V,K)$
+\paragraph{Dualraum}
+\begin{itemize}
+	\item \textbf{Linearform} (auf $V$): $= \chi \in \text{Hom}(V,K)$
+	\item \textbf{Dualraum}: $=V^{*} = \text{Hom}(V,K)$
 	\item $V^{*} \cong \text{Abb}(B,K) \Rightarrow \text{dim}(V^{*})=\text{dim}(V)$
 	\item $\text{dim}(V) < \infty \Rightarrow \text{dim}(V^{*})=\text{dim}(V)$
-	\item \underline{duale Basis}: $\langle \{ b_1, \dots, b_n \} \rangle = V \Rightarrow \langle \{ b_1^*, \dots, b_n^* \} \rangle = V^*$ mit \\* $b_i^*(b_j)=\begin{cases} 1, \text{ falls } i=j \\ 0 \text{ sonst} \end{cases}$
-	\item \underline{duale Abbildung}: $V,W$ K-VRe, $\varphi \in \text{Hom}(V,W). \\* \forall \kappa \in W^*: (\kappa \circ \varphi: V \rightarrow K) \in \text{Hom}(V,K) \\* \leadsto \varphi^*: W^* \rightarrow V^*, \varphi^*(\kappa)=\kappa \circ \varphi$ linear. Es gilt:
-	\begin{enumeration}
+	\item \textbf{duale Basis}: $\langle \{ b_1, \dots, b_n \} \rangle = V \Rightarrow \langle \{ b_1^*, \dots, b_n^* \} \rangle = V^*$ mit \\* $b_i^*(b_j)=\begin{cases} 1, \text{ falls } i=j \\ 0 \text{ sonst} \end{cases}$
+	\item \textbf{duale Abbildung}: $V,W$ K-VRe, $\varphi \in \text{Hom}(V,W). \\* \forall \kappa \in W^*: (\kappa \circ \varphi: V \rightarrow K) \in \text{Hom}(V,K) \\* \leadsto \varphi^*: W^* \rightarrow V^*, \varphi^*(\kappa)=\kappa \circ \varphi$ linear. Es gilt:
+	\begin{enumerate}
 		\item $\varphi \in \text{Hom}(V,W)$ surjektiv $\Rightarrow \varphi^* \in \text{Hom}(V,K)$ injektiv
 		\item $\varphi \in \text{Hom}(V,W)$ injektiv $\Rightarrow \varphi^* \in \text{Hom}(V,K)$ surjektiv
-	\end{enumeration}
-	\item \underline{Bidualraum}: $\text{dim}(V) < \infty \Rightarrow V \cong V^{**}$
-\end{items}
+	\end{enumerate}
+	\item \textbf{Bidualraum}: $\text{dim}(V) < \infty \Rightarrow V \cong V^{**}$
+\end{itemize}
 
-\textbf{Abbildungsmatrix}:
-\begin{items}
+\paragraph{Abbildungsmatrix}
+\begin{itemize}
 	\item $V,W$ endl.-dim. K-VRe, $B=\{ b_1, \dots, b_q \}, C=\{c_1, \dots, c_p \}, \\* \langle B \rangle = V, \langle C \rangle = W, \varphi \in \text{Hom}(V,W) \\* \leadsto \varphi(b_j)=\sum_{i=1}^p a_{ij}c_i \ (1 \leq j \leq q) \\* \leadsto K^{p \times q} \ni A =: D_{CB}(\varphi)$ ($\varphi(b_j)$ berechnen $\leadsto a_{1j},\dots,a_{pj}$) \\* $C$ Standardbasis $\Rightarrow$ ``Die Spalten von $D_{CB}(\varphi)$ sind die Bilder der Basisvektoren in $B$''
-	\item \underline{Abbildungsmatrix} (von $\varphi$ bzgl. $B$ und $C$): $=D_{CB}(\varphi) \\* \leadsto \varphi(v)=D_{CB}(\varphi)*v$
-	\item \underline{Koordinatenabbildung}: $D_B: V \rightarrow K^q, D_C: V \rightarrow K^p: \\* D_C(\varphi(v))=D_{CB}(\varphi)*D_B(v)$
-	\item \underline{duale Basis}: $D_{B^*C^*}(\varphi^*) = D_{CB}(\varphi)^T$
-\end{items}
+	\item \textbf{Abbildungsmatrix} (von $\varphi$ bzgl. $B$ und $C$): $=D_{CB}(\varphi) \\* \leadsto \varphi(v)=D_{CB}(\varphi)*v$
+	\item \textbf{Koordinatenabbildung}: $D_B: V \rightarrow K^q, D_C: V \rightarrow K^p: \\* D_C(\varphi(v))=D_{CB}(\varphi)*D_B(v)$
+	\item \textbf{duale Basis}: $D_{B^*C^*}(\varphi^*) = D_{CB}(\varphi)^T$
+\end{itemize}
 
-\textbf{Basiswechsel}:
-\begin{items}
+\paragraph{Basiswechsel}
+\begin{itemize}
 	\item $D_{\tilde{C}\tilde{B}}(\varphi)=D_{\tilde{C}C}(\varphi)*D_{CB}(\varphi)*D_{B\tilde{B}}(\varphi)$
 	\item $U,V,W$ K-VRe, $\langle A \rangle = U, \langle B \rangle = V, \langle C \rangle = W, \\* \varphi \in \text{Hom}(U,V), \Psi \in \text{Hom}(V,W) \\* \leadsto D_{CA}(\Psi \circ \varphi)=D_{CB}(\Psi)*D_{BA}(\varphi)$
-\end{items}
+\end{itemize}
